@@ -153,7 +153,6 @@ static int kTopEdgeWidth   = 1;
         CGRect tabRect = CGRectMake(tab.frame.origin.x - kInterTabMargin, kTopEdgeWidth, kInterTabMargin, rect.size.height);
         CGContextFillRect(ctx, tabRect);
     }
-    
 }
 
 - (void)layoutSubviews
@@ -175,6 +174,9 @@ static int kTopEdgeWidth   = 1;
         
         //Calucate the starting x value, to center the buttons
         rect.origin.x = (screenWidth - ([self tabWidth]*tabNumber))/2.0f;
+        
+        // TODO: use a alignment property!
+        rect.origin.x = 0;
 	}
     else {
         // Calculating the tabs width.
